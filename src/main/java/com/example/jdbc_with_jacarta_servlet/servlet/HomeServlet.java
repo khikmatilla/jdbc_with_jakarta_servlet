@@ -27,6 +27,7 @@ public class HomeServlet extends HttpServlet {
                     "123"
             );
 
+            PreparedStatement ps = connection.prepareStatement("select * from book order by id");
             PreparedStatement ps = connection.prepareStatement("select * from book");
             ResultSet resultSet = ps.executeQuery();
             while (resultSet.next()) {

@@ -19,6 +19,7 @@
                     <th scope="col">Id</th>
                     <th scope="col">Title</th>
                     <th scope="col">Pages Count</th>
+                    <th scope="col">Actoins</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -27,7 +28,10 @@
                         <td><c:out value="${book.getId()}"/></td>
                         <td><c:out value="${book.getTitle()}"/></td>
                         <td><c:out value="${book.getPeges()}"/></td>
-
+                        <td>
+                            <a href="book/delete/${book.getId()}" class="btn btn-danger">Delate</a> ||
+                            <a href="book/update/${book.getId()}" class="btn btn-warning">Update</a>
+                        </td>
                     </tr>
                 </c:forEach>
 
