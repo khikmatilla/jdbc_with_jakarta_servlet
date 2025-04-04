@@ -6,7 +6,6 @@ import jakarta.persistence.Table;
 import lombok.*;
 
 @Entity
-@Table(name = "Book")
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
