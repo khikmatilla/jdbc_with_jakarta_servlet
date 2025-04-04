@@ -16,10 +16,10 @@ public class SecurityFilter implements Filter {
         String username = (String) session.getAttribute("username");
         String requestURI = req.getRequestURI();
         System.out.println(requestURI);
-        if (!requestURI.equals("/login") && username == null) {
-            res.sendRedirect("/login");
-        } else {
-            filterChain.doFilter(req, res);
-        }
+//        if (!requestURI.equals("/login") && username == null) {
+//            res.sendRedirect("/login");
+//        } else {
+//            filterChain.doFilter(req, res);
+//        }
     }
 }

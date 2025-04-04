@@ -1,4 +1,4 @@
-<%--
+<%@ page import="java.util.Arrays" %><%--
   Created by IntelliJ IDEA.
   User: user
   Date: 4/3/2025
@@ -11,7 +11,13 @@
     <title>Main Page</title>
 </head>
 <body>
-<h1>Username: <%=request.getSession().getAttribute("uername")%></h1>
+<h1>Username: <%=
+Arrays.stream(request.getCookies())
+        .filter(cookie -> cookie.getName().equals("username"))
+        .findFirst()
+        .get()
+        .getValue()
+%></h1>
 <h1>Main Page</h1>
 </body>
 </html>

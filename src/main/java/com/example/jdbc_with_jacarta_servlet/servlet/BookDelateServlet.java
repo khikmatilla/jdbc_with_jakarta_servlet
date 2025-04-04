@@ -11,8 +11,7 @@ import org.postgresql.Driver;
 
 import java.io.IOException;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+
 
 @WebServlet(name = "BookDelateServlet", value = "/book/delete/*")
 public class BookDelateServlet extends HttpServlet {
