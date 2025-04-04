@@ -27,6 +27,7 @@ public class SimpleServlet extends HttpServlet {
 
 
         entityManager.getTransaction().commit();
+        entityManager.close();
     }
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
